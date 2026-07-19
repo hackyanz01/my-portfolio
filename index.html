@@ -1,0 +1,79 @@
+export interface Project {
+  id: string;
+  title: string;
+  category: "Networking" | "Cloud" | "Cyber Security" | "AI" | "Web Development" | "UI Design" | string;
+  description: {
+    en: string;
+    id: string;
+  };
+  tags: string[];
+  stars: number;
+  forks: number;
+  liveUrl: string;
+  githubUrl: string;
+}
+
+export interface SkillCategory {
+  name: {
+    en: string;
+    id: string;
+  };
+  iconName: string;
+  skills: Array<{
+    name: string;
+    level: number; // 1-100
+    iconName?: string;
+  }>;
+}
+
+export interface Certificate {
+  id: string;
+  title: string;
+  issuer: "Cisco" | "Dicoding" | "Telkom" | "Cloud" | "Networking" | "Cyber Security" | string;
+  date: string;
+  image: string;
+  credentialUrl: string;
+}
+
+export interface TimelineEvent {
+  id: string;
+  year: string;
+  title: {
+    en: string;
+    id: string;
+  };
+  subtitle: string;
+  description: {
+    en: string;
+    id: string;
+  };
+  type: "education" | "experience" | "achievement";
+}
+
+export interface Article {
+  id: string;
+  title: {
+    en: string;
+    id: string;
+  };
+  excerpt: {
+    en: string;
+    id: string;
+  };
+  category: string;
+  date: string;
+  readTime: string;
+  slug: string;
+}
+
+export interface Testimonial {
+  id: string;
+  name: string;
+  role: string;
+  company: string;
+  avatar: string;
+  text: {
+    en: string;
+    id: string;
+  };
+}
